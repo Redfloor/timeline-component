@@ -1,0 +1,7 @@
+.endCaret {
+    position: absolute;
+    top: calc(50% - 25px);
+    transform: translateY(-50%);
+    right: 15px;
+    height: 16px;
+}

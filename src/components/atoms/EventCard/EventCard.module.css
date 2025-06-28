@@ -1,0 +1,72 @@
+.upArrowWrapper {
+    top: 0;
+    transform: translate(calc(-50% + 4px), calc(-100% - 38px)); /* Weird calc to make sure we align with the lines as well.*/
+}
+
+.downArrowWrapper {
+    bottom: 0;
+    transform: translate(calc(-50% + 4px), calc(100% + 38px)); /*11px gap for the line x2 + 16px length*/
+}
+
+.eventCard {
+    position: absolute;
+    width: 130px;
+    height: fit-content;
+    transition: background-color 0.3s ease;
+    background-color: var(--color-primary-400);
+    box-shadow: 0 4px 12px var(--color-shadow);
+    border-radius: 5px;
+    display: flex;
+    padding: 8px;
+    gap: 16px;
+    flex-direction: column;
+}
+
+.eventCard:hover {
+    background-color: var(--color-primary-600);
+}
+
+.eventCard > p {
+    margin: auto 0;
+    text-align: center;
+    font-family: "IBM Plex Sans", sans-serif; /*My eye is failing here, inspector says it's the right font but I'm not seeing it, might be because testing local.*/
+}
+
+.arrow {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    transition: border-color 0.3s ease;
+}
+
+.upArrow {
+    composes: arrow;
+    top: -8px;
+    border-bottom: 9px solid var(--color-primary-400);
+}
+
+.eventCard:hover .upArrow {
+    border-bottom-color: var(--color-primary-600);
+}
+
+.downArrow {
+    composes: arrow;
+    bottom: -8px;
+    border-top: 9px solid var(--color-primary-400);
+}
+
+.eventCard:hover .downArrow {
+    border-top-color: var(--color-primary-600);
+}
+
+.last {
+    transform: translate(calc(-50% - 41px), calc(100% + 38px));
+}
+
+.last > div {
+    transform: translateX(37px);
+}

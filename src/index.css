@@ -1,9 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;600;700&display=swap');
 
+:root {
+  --color-primary-400: #173F4B;
+  --color-primary-500: #215A6B;
+  --color-primary-600: #3C7F90;
+  --color-secondary-400: red;
+  --color-secondary-500: red; /* Adding the values because OCD, will error out if called.*/
+  --color-secondary-600: #00B897;
+  --color-white: #FFFFFF; /* Hard white? Really? */
+  --color-shadow: rgba(0, 0, 0, 0.25);
+}
+
 body {
   background-color: rgba(33, 90, 107, 1);
   font-family: "IBM Plex Sans", sans-serif;
   font-size: 14px;
   color: #ffffff;
 }
+
 
